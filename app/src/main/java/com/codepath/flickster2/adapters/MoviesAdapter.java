@@ -23,6 +23,9 @@ public class MoviesAdapter extends ArrayAdapter<Movie> {
     private static class ViewHolder {
         TextView tvTitle;
         TextView tvOverview;
+        TextView tvTitle2;
+        TextView tvDesc;
+        ImageView ivJesus;
     }
 
     public MoviesAdapter(Context context, ArrayList<Movie> movies) {
@@ -43,6 +46,9 @@ public class MoviesAdapter extends ArrayAdapter<Movie> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_movie, parent, false);
             viewHolder.tvTitle = (TextView) convertView.findViewById(R.id.tvTitle);
             viewHolder.tvOverview = (TextView) convertView.findViewById(R.id.tvOverview);
+            viewHolder.ivJesus = (ImageView) convertView.findViewById(R.id.ivJesus);
+            viewHolder.tvTitle2 = (TextView) convertView.findViewById(R.id.tvTitle2);
+            viewHolder.tvDesc = (TextView) convertView.findViewById(R.id.tvDesc);
             convertView.setTag(viewHolder);
         } // inflates that xml. creates a representation in memory so we can access it
         else {
@@ -70,6 +76,8 @@ public class MoviesAdapter extends ArrayAdapter<Movie> {
         // Populate the data into the template view using the data object
         viewHolder.tvTitle.setText(movie.getTitle());
         viewHolder.tvOverview.setText(movie.getOverview());
+        //viewHolder.tvTitle2.setText(movie.getTitle());
+        //viewHolder.tvDesc.setText(movie.getOverview());
 
         Log.d("MoviesAdapter", "Position: " + position);
 
