@@ -1,8 +1,11 @@
 package com.codepath.flickster2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.codepath.flickster2.adapters.MoviesAdapter;
@@ -57,9 +60,12 @@ public class MoviesActivity extends AppCompatActivity {
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 super.onFailure(statusCode, headers, responseString, throwable);
             }
-
         });
 
-    }
-
-}
+    lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            Intent Details = new Intent(MoviesActivity.this, MovieDetails.class);
+            startActivity(Details);
+        }
+    });
+}}

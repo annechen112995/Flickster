@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="157dp"
+        android:layout_height="210dp"
+        android:id="@+id/ivJesus"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/jesus" />
+
+    <TextView
+        android:id="@+id/lblRateMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rate Me:"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <RatingBar
+        style="?android:attr/ratingBarStyleSmall"
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="10.0"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:onClick="onSubmit"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title of Movie"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:id="@+id/tvTitle2"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:text="Place new text description here. "
+        android:id="@+id/tvDesc"
+        android:layout_margin="10dp" />
+
+    <TextView
+            android:id="@+id/txtRatingValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</LinearLayout>
